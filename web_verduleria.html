@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verdulería La Colionia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Verdulería La Colionia</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#bolsones">Bolsones</a>
+      <a href="#carrito">Carrito</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenidos a La Colionia</h2>
+      <p>Tu verdulería de confianza. Frescura y calidad directo a tu casa.</p>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="item" data-nombre="Tomate" data-precio="500">
+        <img src="images/tomate.jpg" alt="Tomate" />
+        <p><strong>Tomate</strong> - $500/kg</p>
+        <input type="number" min="1" value="1" />
+        <button>Agregar</button>
+      </div>
+      <div class="item" data-nombre="Papa" data-precio="300">
+        <img src="images/papa.jpg" alt="Papa" />
+        <p><strong>Papa</strong> - $300/kg</p>
+        <input type="number" min="1" value="1" />
+        <button>Agregar</button>
+      </div>
+    </section>
+
+    <section id="bolsones">
+      <h2>Bolsones</h2>
+      <div class="item" data-nombre="Bolsón Familiar" data-precio="5000">
+        <img src="images/bolson_familiar.jpg" alt="Bolsón Familiar" />
+        <p><strong>Bolsón Familiar</strong> - $5000</p>
+        <p>Incluye: 2kg papas, 1kg tomate, 1 lechuga, 1kg zanahoria</p>
+        <button>Agregar</button>
+      </div>
+      <div class="item" data-nombre="Bolsón Ahorro" data-precio="3500">
+        <img src="images/bolson_ahorro.jpg" alt="Bolsón Ahorro" />
+        <p><strong>Bolsón Ahorro</strong> - $3500</p>
+        <p>Incluye: 1kg papa, 1kg cebolla, 1kg tomate</p>
+        <button>Agregar</button>
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2>Carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p>Total: $<span id="total">0</span></p>
+      <button onclick="mostrarFormulario()">Finalizar compra</button>
+    </section>
+
+    <section id="formulario" style="display: none">
+      <h2>Formulario de compra y envío</h2>
+      <form id="form-pedido">
+        <input type="text" name="nombre" placeholder="Nombre y apellido" required />
+        <input type="tel" name="telefono" placeholder="Número de teléfono" required />
+        <input type="text" name="direccion" placeholder="Dirección (si aplica)" />
+        <input type="url" name="gps" placeholder="Ubicación GPS (link de Google Maps)" />
+        <input type="text" name="nombreCasa" placeholder="Nombre de la casa" />
+        <input type="text" name="destinatario" placeholder="A nombre de quién va el pedido" required />
+
+        <label>Forma de entrega:</label>
+        <select name="entrega">
+          <option value="retiro">Retiro</option>
+          <option value="envio">Envío</option>
+        </select>
+
+        <label>Método de pago:</label>
+        <select name="pago">
+          <option value="efectivo">Efectivo</option>
+          <option value="transferencia">Transferencia</option>
+          <option value="tarjeta">Tarjeta</option>
+        </select>
+
+        <label for="comprobante">Comprobante de pago (si aplica):</label>
+        <input type="file" name="comprobante" accept="image/*,application/pdf" />
+
+        <button type="submit">Confirmar pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

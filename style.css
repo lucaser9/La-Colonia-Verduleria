@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="file"],
+select {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+#carrito ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+@media (max-width: 600px) {
+    .item {
+        text-align: center;
+    }
+
+    .item img {
+        margin: 0 auto;
+    }
+}
